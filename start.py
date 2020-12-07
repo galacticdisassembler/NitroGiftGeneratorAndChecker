@@ -23,17 +23,22 @@ print("""
 ██████╗██║░░╚═╝███████║█████╗░░██║░░╚═╝█████═╝░█████╗░░██████╔╝
 ╚═██╔═╝██║░░██╗██╔══██║██╔══╝░░██║░░██╗██╔═██╗░██╔══╝░░██╔══██╗
 ░░╚═╝░░╚█████╔╝██║░░██║███████╗╚█████╔╝██║░╚██╗███████╗██║░░██║
-░░░░░░░░╚════╝░╚═╝░░╚═╝╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝""")
+░░░░░░░░╚════╝░╚═╝░░╚═╝╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝\n
+With counter for your convenience\n""")
 time.sleep(2)
 print("Creator  -  Zafros ")
 time.sleep(0.3)
 print("https://github.com/Zafros56   \n")
 time.sleep(0.2)
+print("Retard that added counter - galacticdisassembler")
+time.sleep(0.2)
+print("https://github.com/galacticdisassembler\n")
+time.sleep(0.2)
 
 num=input('Input How Many Codes to Generate and Check: ')
 
 f=open("Nitro Codes.txt","w", encoding='utf-8')
-
+q=0
 print("Wait, Generating for you!")
       
 for n in range(int(num)):
@@ -52,14 +57,14 @@ with open("Nitro Codes.txt") as f:
         nitro = line.strip("\n")
 
         url = "https://discordapp.com/api/v6/entitlements/gift-codes/" + nitro + "?with_application=false&with_subscription_plan=true"
-
         r = requests.get(url)
 
         if r.status_code == 200:
             print(" Valid | {} ".format(line.strip("\n")))
             break
         else:
-        	print(" Invalid | {} ".format(line.strip("\n")))
+        	q=q+1
+        	print(" Invalid | {} ".format(line.strip("\n")), q)
 input("The end! Press Enter 5 times to close the program.")
 input("4")
 input("3")
